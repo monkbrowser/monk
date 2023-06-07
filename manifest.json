@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "version": "0.0.1.23",
-  "name": "royce-grayscale",
-  "description": "royce-grayscale",
+  "name": "Monk",
+  "description": "Monk",
   "icons": {
     "128": "/img/logo.png"
   },

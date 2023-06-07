@@ -27,10 +27,11 @@ header {
   justify-content: center;
   align-items: center;
 
-  height: 72px;
+  /* height: 272px; */
+  padding: 24px;
 
   background-color: white;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  /* border-bottom: 1px solid rgba(0, 0, 0, 0.12); */
 
   color: rgb(75, 131, 196);
   font-size: 16px;
@@ -38,8 +39,7 @@ header {
 }
 
 header img {
-  height: 48px;
-
+  height: 128px;
   margin-right: 12px;
 }
 
@@ -196,14 +196,14 @@ p {
 }
 
 [data-toggle-key].active .chrome_toggle .chrome_toggle-bar {
-  background-color: #4b83c4;
+  background-color: rgb(238 89 49);
   opacity: 0.4;
 }
 
 [data-toggle-key].active .chrome_toggle .chrome_toggle-knob {
   left: auto;
   left: 18px;
-  background-color: #4b83c4;
+  background-color: rgb(238 89 49);
 }
 
 a.kx-logo img {
