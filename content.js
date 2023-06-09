@@ -1,17 +1,31 @@
+//
+const CONFIG = {
+  toggles: {
+    // name: [ title, default_value ]
+    ad_blocker: ["Ad Blocker", true],
+    greyscale: ["Greyscale", false],
+    text_only: ["Text Only", false],
+  },
+};
+//
 async function render(links) {
   //
   let storage = await chrome.storage.local.get(null);
-  //
-  storage.ad_blocker = storage.ad_blocker === false ? false : true;
-  storage.greyscale = storage.greyscale === false ? false : true;
-  storage.text_only = storage.text_only === false ? false : true;
+  // init_storage
+  for (let key in CONFIG.toggles) {
+    if (storage[key] === true || storage[key] === false) {
+      // do nothing
+    } else {
+      storage[key] = CONFIG.toggles[key][1];
+    }
+  }
   //
   let styles = document.querySelectorAll(`.royce-geyscale-style`);
   for (let style of styles) {
     style.remove();
   }
   //
-  ["ad_blocker", "greyscale", "text_only"].forEach((name) => {
+  Object.keys(CONFIG.toggles).forEach((name) => {
     if (storage[name] === true) {
       if (document.contains(links[name]) === true) {
         // do nothing
@@ -32,7 +46,7 @@ async function render(links) {
 async function init() {
   //
   let links = {};
-  ["ad_blocker", "greyscale", "text_only"].forEach((name) => {
+  Object.keys(CONFIG.toggles).forEach((name) => {
     links[name] = document.createElement("link");
     links[name].rel = "stylesheet";
     links[name].href = chrome.runtime.getURL(`/css/${name}.css`);
