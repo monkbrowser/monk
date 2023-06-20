@@ -1,0 +1,59 @@
+[
+ {
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "initiatorDomains": [
+    "duda-kinderzeitung.de",
+    "dumont-rheinland.de",
+    "dumont.de",
+    "mopo.de",
+    "rheinische-anzeigenblaetter.de",
+    "yourjob.de"
+   ],
+   "isUrlFilterCaseSensitive": false,
+   "regexFilter": "consent.[\\s\\S]*.de"
+  },
+  "id": 314
+ },
+ {
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "initiatorDomains": [
+    "ahorn-camp.de",
+    "audiovision.de",
+    "der-windows-papst.de",
+    "emojiszumkopieren.de",
+    "fcportables.com",
+    "geekguide.de",
+    "indibit.de",
+    "mmo-sankar.de",
+    "noobguides.de",
+    "technikshavo.de",
+    "tecsafe.de",
+    "vampster.com",
+    "viel-unterwegs.de",
+    "wagenheber24.de"
+   ],
+   "isUrlFilterCaseSensitive": false,
+   "regexFilter": "\\/wp-content\\/[a-f0-9]{32}.js"
+  },
+  "id": 315
+ },
+ {
+  "action": {
+   "type": "block"
+  },
+  "condition": {
+   "initiatorDomains": [
+    "der-windows-papst.de"
+   ],
+   "isUrlFilterCaseSensitive": false,
+   "regexFilter": "der-windows-papst.de\\/.{32}\\?ver"
+  },
+  "id": 603
+ }
+]
